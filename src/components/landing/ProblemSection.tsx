@@ -17,7 +17,7 @@ export const ProblemSection = () => {
   const problems = [
     { icon: Users, title: "Mid-Week Disconnect", description: "Churches lack tools for members to stay connected between Sundays. Community fades by Wednesday." },
     { icon: Clock, title: "Overwhelmed Parents", description: "Parents want to disciple their kids but need age-appropriate content and daily structure." },
-    { icon: MessageCircle, title: "One-Size-Fits-All", description: "Seekers, new believers, and mature Christians all get the same generic content." },
+    { icon: MessageCircle, title: "One-Size-Fits-All", description: "Kids, beginners, and advanced believers all get the same generic content." },
     { icon: Calendar, title: "No Safe Spaces", description: "Small groups need private, self-moderated spaces outside of church apps and social media." },
     { icon: Smartphone, title: "Missing Biblical Lens", description: "Current events lack daily biblical perspective to help believers navigate today's world." },
     { icon: TrendingDown, title: "Scattered Tools", description: "Prayer apps, devotionals, Bible study, and community tools are all in different places." }
@@ -36,7 +36,7 @@ export const ProblemSection = () => {
         >
           <div className="text-center mb-20 space-y-6">
             <div className="w-16 h-1 bg-accent-primary mx-auto mb-8" />
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight">
               The Problem
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
@@ -52,7 +52,7 @@ export const ProblemSection = () => {
                 const Icon = problem.icon;
                 return (
                   <CarouselItem key={index} className="pl-6 basis-[85%] md:basis-1/2 lg:basis-1/3">
-                    <div className="group p-10 rounded-[32px] bg-card border-2 border-border hover:border-accent-primary/20 transition-all hover:shadow-luxury h-full relative overflow-hidden">
+                    <div className="group p-6 sm:p-10 rounded-2xl sm:rounded-[32px] bg-card border-2 border-border hover:border-accent-primary/20 transition-all hover:shadow-luxury h-full relative overflow-hidden">
                       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-luxury opacity-0 group-hover:opacity-100 transition-opacity" />
                       <div className="w-16 h-16 rounded-2xl bg-muted group-hover:bg-gradient-luxury flex items-center justify-center mb-8 transition-all">
                         <Icon className="w-8 h-8 text-foreground group-hover:text-white transition-colors" />
@@ -68,14 +68,14 @@ export const ProblemSection = () => {
             <CarouselNext className="hidden md:flex -right-6 border-2" />
           </Carousel>
 
-          <div className="flex justify-center gap-2 mt-10">
+          <div className="flex justify-center gap-3 mt-10">
             {problems.map((_, i) => (
               <button
                 key={i}
                 onClick={() => api?.scrollTo(i)}
                 className={cn(
-                  "h-2 rounded-full transition-all duration-300",
-                  current === i ? "bg-accent-primary w-8" : "bg-muted-foreground/30 w-2 hover:bg-muted-foreground/50"
+                  "h-3 rounded-full transition-all duration-300 min-w-[44px] sm:min-w-0",
+                  current === i ? "bg-accent-primary w-10 sm:w-8" : "bg-muted-foreground/30 w-3 sm:w-2 hover:bg-muted-foreground/50"
                 )}
               />
             ))}

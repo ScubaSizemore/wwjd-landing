@@ -63,12 +63,13 @@ export const HeroSection = () => {
 
         {/* Headline */}
         <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.05] tracking-tight"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[1.05] tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          Ask the Question.{" "}
+          Ask the Question.
+          <br />
           <span className="italic text-gradient-luxury">
             Live the Answer.
           </span>
@@ -76,7 +77,7 @@ export const HeroSection = () => {
 
         {/* Subheadline */}
         <motion.p
-          className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light"
+          className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light px-2"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -119,7 +120,7 @@ export const HeroSection = () => {
             variant="primary"
             size="lg"
             onClick={scrollToSignup}
-            className="px-10 py-7 text-lg"
+            className="w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg"
           >
             Reserve My Spot
           </Button>
@@ -128,7 +129,7 @@ export const HeroSection = () => {
             variant="outline"
             size="lg"
             onClick={scrollToVideo}
-            className="px-10 py-7 text-lg border-2 hover:border-accent-primary/80"
+            className="w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg border-2 hover:border-accent-primary/80"
           >
             Watch the Video
             <ChevronDown className="w-5 h-5 ml-2" />

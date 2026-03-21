@@ -1,5 +1,8 @@
+import { useEffect } from "react";
 import { Sparkles } from "lucide-react";
 import { InView } from "@/components/ui/in-view";
+
+const GHL_FORM_URL = "https://api.xealai.com/widget/form/Sgb0KpGQH0DNfSj9PHDp";
 
 interface SignupFormProps {
   variant?: "primary" | "secondary";
@@ -7,6 +10,16 @@ interface SignupFormProps {
 
 export const SignupForm = ({ variant = "primary" }: SignupFormProps) => {
   const isPrimary = variant === "primary";
+
+  useEffect(() => {
+    // Load GHL form script once
+    if (!document.querySelector('script[src*="xealai.com/js/form_embed.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://api.xealai.com/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   return (
     <section
@@ -46,14 +59,15 @@ export const SignupForm = ({ variant = "primary" }: SignupFormProps) => {
                   : "Reserve your spot now and get early access to the WWJD.com SuperApp this Easter."}
               </p>
 
-              {/* GHL Form Placeholder */}
-              <div
-                id={isPrimary ? "ghl-form" : "ghl-form-bottom"}
-                className="min-h-[200px] flex items-center justify-center rounded-xl border border-dashed border-white/20 bg-white/[0.02] p-6"
-              >
-                <p className="text-sm text-muted-foreground italic">
-                  GoHighLevel form will be embedded here
-                </p>
+              {/* GHL Form Embed */}
+              <div className="rounded-xl overflow-hidden -mx-2 sm:mx-0">
+                <iframe
+                  src={GHL_FORM_URL}
+                  style={{ border: "none", width: "100%", minHeight: "350px", maxHeight: "600px" }}
+                  scrolling="no"
+                  id={isPrimary ? "ghl-form" : "ghl-form-bottom"}
+                  title="Join the WWJD Waitlist"
+                />
               </div>
             </div>
           </div>

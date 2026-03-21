@@ -1,4 +1,4 @@
-import { Home, Users, ShieldCheck, MessageCircle, Calendar, Heart, TrendingUp, Baby, GraduationCap, Sparkles, BookOpen, Crown } from "lucide-react";
+import { Home, Users, ShieldCheck, MessageCircle, Calendar, Heart, TrendingUp, Baby, BookOpen, Crown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { InView } from "@/components/ui/in-view";
 
@@ -13,12 +13,9 @@ export const FamilyHubSection = () => {
   ];
 
   const contentTiers = [
-    { icon: Baby, name: "Kids", age: "Under 8", color: "from-pink-400 to-rose-500" },
-    { icon: Users, name: "Tweens", age: "9-12", color: "from-orange-400 to-amber-500" },
-    { icon: GraduationCap, name: "Teens", age: "13-17", color: "from-cyan-400 to-blue-500" },
-    { icon: Sparkles, name: "Seekers", age: "Exploring", color: "from-purple-400 to-violet-500" },
-    { icon: BookOpen, name: "New Believers", age: "Growing", color: "from-green-400 to-emerald-500" },
-    { icon: Crown, name: "Mature", age: "Leading", color: "from-amber-400 to-yellow-500" },
+    { icon: Baby, name: "Kids", age: "Under 8", color: "from-blue-400 to-sky-500" },
+    { icon: BookOpen, name: "Beginner", age: "Growing in Faith", color: "from-green-400 to-emerald-500" },
+    { icon: Crown, name: "Advanced", age: "Seasoned Believers", color: "from-amber-400 to-yellow-500" },
   ];
 
   return (

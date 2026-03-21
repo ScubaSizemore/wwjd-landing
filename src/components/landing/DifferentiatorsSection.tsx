@@ -1,13 +1,10 @@
-import { Sparkles, Shield, Home, Baby, Users, GraduationCap, BookOpen, Crown, Vote, Calendar, Bell, MessageSquare, Heart, TrendingUp, ShieldCheck } from "lucide-react";
+import { Sparkles, Shield, Home, Baby, BookOpen, Crown, Users, Vote, Calendar, Bell, MessageSquare, Heart, TrendingUp, ShieldCheck } from "lucide-react";
 import { InView } from "@/components/ui/in-view";
 
 const tiers = [
-  { icon: Baby, name: "Kids", color: "bg-pink-500/20 text-pink-400" },
-  { icon: Users, name: "Tweens", color: "bg-orange-500/20 text-orange-400" },
-  { icon: GraduationCap, name: "Teens", color: "bg-cyan-500/20 text-cyan-400" },
-  { icon: Sparkles, name: "Seekers", color: "bg-purple-500/20 text-purple-400" },
-  { icon: BookOpen, name: "New Believers", color: "bg-green-500/20 text-green-400" },
-  { icon: Crown, name: "Mature", color: "bg-amber-500/20 text-amber-400" },
+  { icon: Baby, name: "Kids", subtitle: "Under 8", color: "bg-blue-500/20 text-blue-400" },
+  { icon: BookOpen, name: "Beginner", subtitle: "Growing in Faith", color: "bg-green-500/20 text-green-400" },
+  { icon: Crown, name: "Advanced", subtitle: "Seasoned Believers", color: "bg-amber-500/20 text-amber-400" },
 ];
 
 const communityFeatures = [
@@ -36,7 +33,7 @@ export const DifferentiatorsSection = () => {
             visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
           }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-foreground tracking-tight mb-4">
             What Makes Us{" "}
             <span className="italic text-gradient-luxury">Different</span>
           </h2>
@@ -48,11 +45,11 @@ export const DifferentiatorsSection = () => {
         <div className="grid md:grid-cols-3 gap-6">
           {/* Card 1: Personalized Content */}
           <InView variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } }}>
-            <div className="group h-full p-8 rounded-3xl bg-card border border-border hover:border-accent-primary/30 transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-luxury flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Sparkles className="w-7 h-7 text-white" />
+            <div className="group h-full p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-card border border-border hover:border-accent-primary/30 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-luxury flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">Personalized by Age & Faith Level</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">Personalized by Age & Faith Level</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Every devotional, prayer, and growth track adapts to where you are in your journey.
               </p>
@@ -60,9 +57,10 @@ export const DifferentiatorsSection = () => {
                 {tiers.map((tier, i) => {
                   const Icon = tier.icon;
                   return (
-                    <span key={i} className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium ${tier.color}`}>
-                      <Icon className="w-3 h-3" />
+                    <span key={i} className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${tier.color}`}>
+                      <Icon className="w-3.5 h-3.5" />
                       {tier.name}
+                      <span className="opacity-70">· {tier.subtitle}</span>
                     </span>
                   );
                 })}
@@ -72,11 +70,11 @@ export const DifferentiatorsSection = () => {
 
           {/* Card 2: Self-Admin Communities */}
           <InView variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.1 } } }}>
-            <div className="group h-full p-8 rounded-3xl bg-card border border-border hover:border-accent-primary/30 transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-luxury flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Shield className="w-7 h-7 text-white" />
+            <div className="group h-full p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-card border border-border hover:border-accent-primary/30 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-luxury flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                <Shield className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">Your Community, Your Rules</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">Your Community, Your Rules</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Create private, invite-only groups with full moderation. No central authority.
               </p>
@@ -96,11 +94,11 @@ export const DifferentiatorsSection = () => {
 
           {/* Card 3: Family Hub */}
           <InView variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: 0.2 } } }}>
-            <div className="group h-full p-8 rounded-3xl bg-card border border-border hover:border-accent-primary/30 transition-all duration-300">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-luxury flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Home className="w-7 h-7 text-white" />
+            <div className="group h-full p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-card border border-border hover:border-accent-primary/30 transition-all duration-300">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-luxury flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                <Home className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">Family Discipleship Hub</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">Family Discipleship Hub</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Grow together as a family — each member at their own level, in one place.
               </p>

@@ -24,12 +24,12 @@ export const HowItWorksSection = () => {
           }}
         >
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">How It Works</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground">How It Works</h2>
             <p className="text-xl text-muted-foreground">You're just 4 steps away.</p>
           </div>
         </InView>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-16">
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
@@ -45,14 +45,14 @@ export const HowItWorksSection = () => {
                     <div className="hidden md:block absolute top-16 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-accent to-primary/30" />
                   )}
                   <div className="relative z-10">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-3xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-2xl">
-                      <Icon className="w-16 h-16 text-white" />
+                    <div className="w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto mb-4 sm:mb-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-accent to-primary flex items-center justify-center shadow-2xl">
+                      <Icon className="w-10 h-10 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-white" />
                     </div>
                     <div className="inline-block px-4 py-1 rounded-full bg-accent/20 text-accent font-bold mb-4">
                       Step {step.number}
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground mb-3">{step.title}</h3>
-                    <p className="text-muted-foreground">{step.description}</p>
+                    <h3 className="text-lg sm:text-2xl font-bold text-foreground mb-2 sm:mb-3">{step.title}</h3>
+                    <p className="text-sm sm:text-base text-muted-foreground">{step.description}</p>
                   </div>
                 </div>
               </InView>

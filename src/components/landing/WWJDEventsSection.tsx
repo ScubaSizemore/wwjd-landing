@@ -16,7 +16,7 @@ export const WWJDEventsSection = () => {
       <div className="absolute bottom-20 left-20 w-64 h-64 bg-section-prayer/20 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <InView
             variants={{
               hidden: { opacity: 0, x: -30 },
@@ -29,7 +29,7 @@ export const WWJDEventsSection = () => {
                 <span>Dynamic Current Events</span>
               </div>
               
-              <h2 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
                 What Would Jesus Say About{" "}
                 <span className="italic text-gradient-luxury">Today's Headlines?</span>
               </h2>

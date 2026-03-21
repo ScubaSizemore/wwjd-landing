@@ -20,7 +20,7 @@ export const TestimonialsSection = () => {
           }}
         >
           <div className="text-center mb-20 space-y-6">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight">
               Trusted by{" "}
               <span className="italic text-gradient-luxury">Faith Communities</span>
             </h2>
@@ -39,14 +39,14 @@ export const TestimonialsSection = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: index * 0.1 } },
               }}
             >
-              <div className="p-10 rounded-[32px] bg-card hover:bg-card/80 border-2 border-border hover:border-accent-primary/20 transition-all hover:shadow-luxury group h-full">
+              <div className="p-6 sm:p-10 rounded-2xl sm:rounded-[32px] bg-card hover:bg-card/80 border-2 border-border hover:border-accent-primary/20 transition-all hover:shadow-luxury group h-full">
                 <div className={cn(
                   "w-16 h-16 rounded-2xl bg-gradient-to-br flex items-center justify-center mb-6 group-hover:scale-110 transition-transform",
                   testimonial.gradient
                 )}>
                   <Quote className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-xl text-foreground mb-8 leading-relaxed font-light">"{testimonial.quote}"</p>
+                <p className="text-base sm:text-xl text-foreground mb-6 sm:mb-8 leading-relaxed font-light">"{testimonial.quote}"</p>
                 <div className="flex items-center gap-4">
                   <div className={cn("w-14 h-14 rounded-full bg-gradient-to-br flex items-center justify-center text-white text-sm font-bold", testimonial.gradient)}>
                     {testimonial.author.split(' ').map(n => n[0]).join('')}
