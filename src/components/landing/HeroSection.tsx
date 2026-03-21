@@ -1,13 +1,17 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Sparkles } from "lucide-react";
+import { Sparkles, Play } from "lucide-react";
 import wwjdLogo from "@/assets/wwjd-icon-blue.png";
 import { motion, useScroll, useTransform } from "motion/react";
 import { TextShimmer } from "@/components/ui/text-shimmer";
 import { CountdownTimer } from "@/components/landing/CountdownTimer";
 
+const VIDEO_ID = "rLaJYErwC-E";
+const THUMBNAIL_URL = `https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
+
 export const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -17,10 +21,6 @@ export const HeroSection = () => {
 
   const scrollToSignup = () => {
     document.getElementById("signup-section")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToVideo = () => {
-    document.getElementById("video-section")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -50,11 +50,49 @@ export const HeroSection = () => {
           />
         </motion.div>
 
+        {/* Video Embed */}
+        <motion.div
+          className="max-w-3xl mx-auto w-full"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-luxury border border-white/10">
+            {isPlaying ? (
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0`}
+                title="WWJD.com Preview"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            ) : (
+              <button
+                onClick={() => setIsPlaying(true)}
+                className="group relative w-full h-full cursor-pointer bg-black"
+                aria-label="Play video"
+              >
+                <img
+                  src={THUMBNAIL_URL}
+                  alt="WWJD.com video preview"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/20" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-luxury transition-transform duration-300 group-hover:scale-110">
+                    <Play className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-zinc-900 ml-1" fill="currentColor" />
+                  </div>
+                </div>
+              </button>
+            )}
+          </div>
+        </motion.div>
+
         {/* Tagline shimmer */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
         >
           <TextShimmer className="text-lg md:text-xl font-medium tracking-wide uppercase" duration={3}>
             Coming Easter 2026
@@ -123,16 +161,6 @@ export const HeroSection = () => {
             className="w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg"
           >
             Reserve My Spot
-          </Button>
-
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={scrollToVideo}
-            className="w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg border-2 hover:border-accent-primary/80"
-          >
-            Watch the Video
-            <ChevronDown className="w-5 h-5 ml-2" />
           </Button>
         </motion.div>
 

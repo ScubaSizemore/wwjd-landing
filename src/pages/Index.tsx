@@ -1,7 +1,7 @@
 import { LandingNavBar } from "@/components/landing/LandingNavBar";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { SignupForm } from "@/components/landing/SignupForm";
-import { VideoSection } from "@/components/landing/VideoSection";
+// VideoSection now embedded in HeroSection
 import { FeatureRibbon } from "@/components/landing/FeatureRibbon";
 import { ProblemSection } from "@/components/landing/ProblemSection";
 import { DifferentiatorsSection } from "@/components/landing/DifferentiatorsSection";
@@ -15,7 +15,6 @@ const Index = () => {
     <div className="min-h-dvh bg-background">
       <LandingNavBar />
       <HeroSection />
-      <VideoSection />
       <SignupForm variant="primary" />
       <FeatureRibbon />
       <ProblemSection />
