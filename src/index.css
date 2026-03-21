@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prevent white flash before React mounts */
+#root {
+  background-color: hsl(var(--background));
+}
+
+/* Smooth carousel transitions */
+.embla__container {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  /* DARK THEME (Default) */
+  :root {
+    /* Core Brand Colors */
+    --ink: 210 40% 98%;
+    --paper: 220 30% 8%;
+    --glass: 220 30% 12%;
+    --glass-elev: 220 30% 15%;
+    --glass-border: 210 40% 98%;
+
+    /* Premium Luxury Tokens */
+    --luxury-dark: 220 30% 8%;
+    --luxury-cream: 40 20% 96%;
+    --luxury-gold: 45 92% 62%;
+    --luxury-copper: 24 80% 50%;
+
+    /* Accent Gradient System */
+    --accent-primary: 249 77% 59%;
+    --accent-secondary: 201 100% 40%;
+
+    /* Link Colors */
+    --link: 199 92% 60%;
+    --link-hover: 199 92% 70%;
+
+    /* Section Colors */
+    --section-prayer: 277 64% 35%;
+    --section-compass: 186 100% 53%;
+    --section-grow: 350 85% 42%;
+    --section-family: 45 92% 62%;
+
+    /* Semantic Colors */
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --danger: 0 72% 51%;
+
+    /* shadcn semantic tokens */
+    --background: 220 30% 8%;
+    --foreground: 210 40% 98%;
+    --card: 220 30% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 249 77% 59%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 30% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 249 77% 59%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 249 77% 59%;
+    --radius: 0.75rem;
+
+    /* App Gradient */
+    --app-gradient-start: 220 40% 5%;
+    --app-gradient-mid: 220 35% 10%;
+    --app-gradient-end: 220 40% 6%;
+
+    /* Glass Effects */
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-bg-elev: rgba(255, 255, 255, 0.12);
+    --glass-border-color: rgba(255, 255, 255, 0.1);
+
+    /* Shadows */
+    --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 0 1px rgba(79,70,229,0.35), 0 10px 20px rgba(34,211,238,0.12);
+    --shadow-glass: 0 10px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+    --shadow-luxury: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    --shadow-float: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255,255,255,0.05);
+    --shadow-inner-glow: inset 0 1px 0 rgba(255,255,255,0.1);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(90deg, hsl(var(--accent-primary)), hsl(var(--accent-secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(249 77% 59%) 0%, hsl(186 100% 53%) 100%);
+    --gradient-subtle: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(255,255,255,0.36) 100%);
+    --gradient-luxury: linear-gradient(135deg, hsl(249 77% 59%) 0%, hsl(201 100% 40%) 50%, hsl(186 100% 53%) 100%);
+    --gradient-dark-fade: linear-gradient(to bottom, transparent 0%, rgba(11,18,32,0.95) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(249 77% 59% / 0.3) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(186 100% 53% / 0.2) 0px, transparent 50%),
+                     radial-gradient(at 0% 50%, hsl(201 100% 40% / 0.2) 0px, transparent 50%);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer utilities {
+  .text-gradient-luxury {
+    background: var(--gradient-luxury);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card-luxury {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border-color);
+    box-shadow: var(--shadow-float), var(--shadow-inner-glow);
+  }
+
+  .pattern-dots {
+    background-image: radial-gradient(#000 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.03;
+  }
+
+  .bg-mesh {
+    background: var(--gradient-mesh);
+  }
+
+  .text-label {
+    @apply text-xs font-bold uppercase tracking-wider;
+  }
+
+  .text-body-muted {
+    @apply text-base text-muted-foreground leading-relaxed;
+  }
+}
