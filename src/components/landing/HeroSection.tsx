@@ -60,7 +60,7 @@ export const HeroSection = () => {
           <div className="relative aspect-video rounded-2xl overflow-hidden shadow-luxury border border-white/10">
             {isPlaying ? (
               <iframe
-                src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0`}
+                src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&loop=1&playlist=${VIDEO_ID}`}
                 title="WWJD.com Preview"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -111,6 +111,7 @@ export const HeroSection = () => {
           <span className="italic text-gradient-luxury">
             Live the Answer.
           </span>
+          <sup className="text-base sm:text-lg md:text-2xl font-normal text-muted-foreground align-super ml-1">™</sup>
         </motion.h1>
 
         {/* Subheadline */}
