@@ -22,7 +22,7 @@ export const TestimonialsSection = () => {
           <div className="text-center mb-20 space-y-6">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight">
               Trusted by{" "}
-              <span className="italic text-gradient-luxury">Faith Communities</span>
+              <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">Faith Communities</span>
             </h2>
             <p className="text-2xl text-muted-foreground font-light">
               See what leaders and families are saying

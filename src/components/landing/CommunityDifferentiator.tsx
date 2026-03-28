@@ -35,7 +35,7 @@ export const CommunityDifferentiator = () => {
             </div>
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
               Your Community.{" "}
-              <span className="italic text-gradient-luxury">Your Rules.</span>
+              <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">Your Rules.</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
               Create private, invite-only communities with full moderation control. No central authority — just you and your people growing together.

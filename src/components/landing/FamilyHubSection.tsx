@@ -37,7 +37,7 @@ export const FamilyHubSection = () => {
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">
               Grow Your Family's{" "}
-              <span className="italic text-gradient-luxury">Faith Together</span>
+              <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">Faith Together</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
               Everything your family needs to build spiritual habits, have meaningful conversations, and grow closer to God — and each other.

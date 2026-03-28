@@ -35,7 +35,7 @@ export const DifferentiatorsSection = () => {
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-foreground tracking-tight mb-4">
             What Makes Us{" "}
-            <span className="italic text-gradient-luxury">Different</span>
+            <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">Different</span>
           </h2>
           <p className="text-center text-muted-foreground text-lg mb-16 max-w-2xl mx-auto">
             Three things you won't find anywhere else — built for real spiritual growth.

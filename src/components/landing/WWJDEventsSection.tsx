@@ -31,7 +31,7 @@ export const WWJDEventsSection = () => {
               
               <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
                 What Would Jesus Say About{" "}
-                <span className="italic text-gradient-luxury">Today's Headlines?</span>
+                <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">Today's Headlines?</span>
               </h2>
               
               <p className="text-xl text-muted-foreground font-light leading-relaxed">

@@ -108,7 +108,7 @@ export const HeroSection = () => {
         >
           Ask the Question.
           <br />
-          <span className="italic text-gradient-luxury">
+          <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">
             Live the Answer.
           </span>
           <sup className="text-base sm:text-lg md:text-2xl font-normal text-muted-foreground align-super ml-1">™</sup>
