@@ -157,23 +157,20 @@ const Book = () => {
           >
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto mb-16">
               <p>
-                In 1896, minister Charles Sheldon read a story to his Kansas
-                congregation — one chapter each week — about a pastor
-                who challenges his church to ask one question before every
-                decision: <em>"What would Jesus do?"</em> That story became{" "}
-                <strong className="text-foreground">In His Steps</strong>, one of the
-                bestselling novels in history, and the origin of the WWJD movement.
+                A Kansas minister. A Sunday evening congregation. A story read aloud, one chapter per week, about ordinary people who decide to do something extraordinary: before every decision, ask <em>"What would Jesus do?"</em> — and then actually do it, regardless of the cost.
               </p>
               <p>
-                This <strong className="text-foreground">WWJD Movement Edition</strong> brings
-                the complete original text to a new generation. Every chapter includes a modern
-                commentary that connects 1896 to your life today — written with the biographical
-                depth of Walter Isaacson and the economy of Ernest Hemingway. Plus a foreword
-                announcing the relaunch of the WWJD movement, a historical introduction, 93
-                discussion questions, and a call to action.
+                The year was 1896. The story became{" "}
+                <strong className="text-foreground">In His Steps</strong>. It sold over fifty million copies. It sparked a global movement. And a century later, four letters on a woven bracelet — WWJD — became the most recognizable symbol in American Christianity.
               </p>
               <p>
-                The book is free. The question is yours.
+                This <strong className="text-foreground">WWJD Movement Edition</strong> is not a reprint. It is a restoration. The complete original text, untouched — plus a modern foreword announcing the relaunch of the movement, a historical introduction tracing the journey from Sheldon's church to fifteen million bracelets, and chapter-by-chapter commentary that makes a 130-year-old novel hit harder than anything written this year.
+              </p>
+              <p>
+                93 discussion questions. A reading guide for small groups. And a call to action that follows you out of the book and into Monday morning.
+              </p>
+              <p className="text-foreground font-medium">
+                The book is free. The question is yours. What would Jesus do?
               </p>
             </div>
           </InView>
