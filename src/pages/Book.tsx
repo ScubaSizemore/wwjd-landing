@@ -89,11 +89,11 @@ const Book = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-[1.15] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-[1.2] tracking-tight">
                 In His Steps:
                 <br />
-                <span className="italic text-gradient-luxury">
-                  What Would Jesus Do?{" "}
+                <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">
+                  What Would Jesus Do?
                 </span>
               </h1>
 
@@ -117,9 +117,9 @@ const Book = () => {
                   variant="outline"
                   size="lg"
                   disabled
-                  className="px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg opacity-70 cursor-not-allowed"
+                  className="px-4 sm:px-8 py-5 sm:py-7 text-sm sm:text-lg opacity-70 cursor-not-allowed w-full sm:w-auto"
                 >
-                  31-Day Challenge — Coming Easter 2026
+                  31-Day Challenge — Easter 2026
                 </Button>
               </div>
 
@@ -142,7 +142,7 @@ const Book = () => {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-foreground tracking-tight mb-4">
               The Book That Started{" "}
-              <span className="italic text-gradient-luxury">WWJD </span>
+              <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">WWJD</span>
             </h2>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">
               130 years old. 50 million copies. One question that changed everything.
@@ -267,9 +267,9 @@ const Book = () => {
               variant="outline"
               size="lg"
               disabled
-              className="px-10 py-7 text-lg opacity-70 cursor-not-allowed"
+              className="px-6 sm:px-10 py-5 sm:py-7 text-sm sm:text-lg opacity-70 cursor-not-allowed"
             >
-              31-Day Challenge — Coming Easter 2026
+              31-Day Challenge — Easter 2026
             </Button>
             <p className="text-sm text-muted-foreground mt-3">
               The challenge launches Easter Sunday. Download the book now and get ready.
