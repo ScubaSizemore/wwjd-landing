@@ -1,17 +1,27 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BrandText } from '@/components/layout/BrandText';
 import { cn } from '@/lib/utils';
 
-const navItems = [
+interface NavItem {
+  label: string;
+  sectionId?: string;
+  href?: string;
+}
+
+const navItems: NavItem[] = [
   { label: 'Features', sectionId: 'features-section' },
   { label: 'How It Works', sectionId: 'how-it-works-section' },
+  { label: 'The Book', href: '/book' },
 ];
 
 export const LandingNavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,15 +32,24 @@ export const LandingNavBar = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // If not on the home page, navigate there first
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMobileMenuOpen(false);
   };
 
-  const handleNavClick = (item: typeof navItems[0]) => {
-    if (item.sectionId) {
+  const handleNavClick = (item: NavItem) => {
+    if (item.href) {
+      navigate(item.href);
+    } else if (item.sectionId) {
       scrollToSection(item.sectionId);
     }
     setIsMobileMenuOpen(false);
@@ -55,7 +74,10 @@ export const LandingNavBar = () => {
               <button
                 key={index}
                 onClick={() => handleNavClick(item)}
-                className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"
+                className={cn(
+                  "text-sm text-muted-foreground hover:text-primary transition-colors relative group",
+                  item.href && location.pathname === item.href && "text-primary"
+                )}
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />

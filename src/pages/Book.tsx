@@ -1,42 +1,42 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { BookOpen, MessageSquare, Headphones, Users, Sparkles, ArrowLeft, ExternalLink } from "lucide-react";
+import { BookOpen, MessageSquare, Headphones, Users, Sparkles, ArrowLeft, Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LandingNavBar } from "@/components/landing/LandingNavBar";
 import { Footer } from "@/components/landing/Footer";
 import { InView } from "@/components/ui/in-view";
 import { motion } from "motion/react";
 
-const features = [
+const challengeFeatures = [
   {
     icon: BookOpen,
     title: "31 Chapters with Modern Commentary",
     description:
-      "Each chapter of the original 1896 novel paired with a fresh commentary connecting Sheldon's world to yours.",
+      "Each chapter paired with Isaacson-depth, Hemingway-lean commentary connecting 1896 to your life today.",
   },
   {
     icon: MessageSquare,
     title: "AI Reading Companion",
     description:
-      "Ask questions about each chapter and get thoughtful, biblically grounded answers in real time.",
+      'Ask questions about each chapter and get biblically grounded answers drawn from the actual text.',
   },
   {
     icon: Sparkles,
-    title: "Daily WWJD Scenarios & Action Steps",
+    title: "Daily WWJD Scenarios",
     description:
-      "Face a modern ethical scenario each day and choose a concrete action to walk in His steps.",
+      "Face a modern ethical dilemma each day — drawn from the chapter's theme — and take a concrete action step.",
   },
   {
     icon: Headphones,
     title: "Audio Narration",
     description:
-      "Listen to every chapter read aloud — perfect for commutes, workouts, or winding down.",
+      "Listen to every chapter read aloud. Perfect for commutes, workouts, or winding down.",
   },
   {
     icon: Users,
     title: "Community Discussion",
     description:
-      "Join other readers on the same journey. Share reflections, encourage one another, grow together.",
+      "31 discussion threads — one per chapter. Share reflections, encourage others, grow together.",
   },
 ];
 
@@ -50,9 +50,8 @@ const Book = () => {
     <div className="min-h-dvh bg-background">
       <LandingNavBar />
 
-      {/* Hero Section */}
+      {/* ── Hero Section ────────────────────────────────────────── */}
       <section className="relative min-h-[90dvh] flex items-center justify-center px-4 pt-20 pb-16 overflow-hidden">
-        {/* Background */}
         <div className="absolute inset-0 -z-10 bg-mesh">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
         </div>
@@ -68,16 +67,15 @@ const Book = () => {
             >
               <div className="relative">
                 <img
-                  src="/og-image.jpg"
+                  src="/book-cover.png"
                   alt="In His Steps: What Would Jesus Do? — WWJD Movement Edition"
                   className="w-72 md:w-80 lg:w-96 rounded-2xl shadow-luxury border border-white/10"
                 />
-                {/* Glow behind book */}
                 <div className="absolute -inset-8 -z-10 bg-accent-primary/15 rounded-full blur-3xl" />
               </div>
             </motion.div>
 
-            {/* Text */}
+            {/* Text + CTAs */}
             <motion.div
               className="text-center md:text-left space-y-6"
               initial={{ opacity: 0, x: 30 }}
@@ -87,7 +85,7 @@ const Book = () => {
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-gold/10 border border-luxury-gold/20">
                 <Sparkles className="w-4 h-4 text-luxury-gold" />
                 <span className="text-sm font-semibold text-luxury-gold">
-                  Free on the WWJD App
+                  Free Download
                 </span>
               </div>
 
@@ -100,7 +98,7 @@ const Book = () => {
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
-                WWJD Movement Edition — The 31-Day Challenge
+                WWJD Movement Edition — The book that started it all, republished for 2026 with modern commentary.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
@@ -110,18 +108,33 @@ const Book = () => {
                   asChild
                   className="px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg"
                 >
+                  <a href="/In-His-Steps.epub" download>
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Free EPUB
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  asChild
+                  className="px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg"
+                >
                   <a href="https://app.wwjd.com" target="_blank" rel="noopener noreferrer">
-                    Start the Challenge — Free
+                    Start the 31-Day Challenge
                     <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
                 </Button>
               </div>
+
+              <p className="text-sm text-muted-foreground">
+                Works with Apple Books, Kindle, and any EPUB reader. 115,000 words. 31 chapters. Free.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* ── About the Book ──────────────────────────────────────── */}
       <section className="py-20 px-4 bg-background">
         <div className="max-w-4xl mx-auto">
           <InView
@@ -135,7 +148,7 @@ const Book = () => {
               <span className="italic text-gradient-luxury">WWJD</span>
             </h2>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">
-              Republished for 2026 — with everything you need to live it out.
+              130 years old. 50 million copies. One question that changed everything.
             </p>
           </InView>
 
@@ -147,33 +160,81 @@ const Book = () => {
           >
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto mb-16">
               <p>
-                In 1896, Congregational minister Charles Sheldon read a story to his
-                Sunday evening congregation — one chapter each week — about a pastor
-                who challenges his church to ask a single question before every
+                In 1896, minister Charles Sheldon read a story to his Kansas
+                congregation — one chapter each week — about a pastor
+                who challenges his church to ask one question before every
                 decision: <em>"What would Jesus do?"</em> That story became{" "}
                 <strong className="text-foreground">In His Steps</strong>, one of the
-                bestselling novels in history with over 50 million copies sold, and the
-                origin of the WWJD movement that swept the world.
+                bestselling novels in history, and the origin of the WWJD movement.
               </p>
               <p>
-                Now, for the first time, the complete novel is available as a free,
-                guided 31-day challenge on the WWJD app. Each day you read one chapter
-                of Sheldon's original text, paired with a modern commentary that
-                connects the dilemmas of 1896 Raymond to the choices you face today.
-                Then you encounter a real-world WWJD scenario and take a concrete
-                action step — turning the question into a daily practice.
+                This <strong className="text-foreground">WWJD Movement Edition</strong> brings
+                the complete original text to a new generation. Every chapter includes a modern
+                commentary that connects 1896 to your life today — written with the biographical
+                depth of Walter Isaacson and the economy of Ernest Hemingway. Plus a foreword
+                announcing the relaunch of the WWJD movement, a historical introduction, 93
+                discussion questions, and a call to action.
               </p>
               <p>
-                Whether you grew up with a WWJD bracelet on your wrist or you're
-                discovering the question for the first time, the 31-Day Challenge is
-                designed to move "What Would Jesus Do?" from slogan to lifestyle.
+                The book is free. The question is yours.
               </p>
             </div>
           </InView>
 
-          {/* Features Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => {
+          {/* Download CTA */}
+          <InView
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.2 } },
+            }}
+          >
+            <div className="text-center mb-20">
+              <Button
+                variant="primary"
+                size="lg"
+                asChild
+                className="px-10 py-7 text-lg"
+              >
+                <a href="/In-His-Steps.epub" download>
+                  <Download className="w-5 h-5 mr-2" />
+                  Download the EPUB — Free
+                </a>
+              </Button>
+            </div>
+          </InView>
+        </div>
+      </section>
+
+      {/* ── 31-Day Challenge Teaser ──────────────────────────────── */}
+      <section className="py-20 px-4 bg-card/30 border-y border-border/50">
+        <div className="max-w-5xl mx-auto">
+          <InView
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+            }}
+          >
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-gold/10 border border-luxury-gold/20 mb-6">
+                <Sparkles className="w-4 h-4 text-luxury-gold" />
+                <span className="text-sm font-semibold text-luxury-gold">
+                  In the WWJD App
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground tracking-tight mb-4">
+                Take the 31-Day{" "}
+                <span className="italic text-gradient-luxury">Challenge</span>
+              </h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Read the book in the app and unlock daily WWJD scenarios, an AI reading companion,
+                audio narration, and community discussion. One chapter. One question. One action. Every day.
+              </p>
+            </div>
+          </InView>
+
+          {/* Feature Cards */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {challengeFeatures.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <InView
@@ -202,59 +263,29 @@ const Book = () => {
               );
             })}
           </div>
+
+          {/* Challenge CTA */}
+          <div className="text-center">
+            <Button
+              variant="outline"
+              size="lg"
+              asChild
+              className="px-10 py-7 text-lg"
+            >
+              <a href="https://app.wwjd.com" target="_blank" rel="noopener noreferrer">
+                Start the 31-Day Challenge
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
+            <p className="text-sm text-muted-foreground mt-3">
+              Works on any device — iOS & Android apps coming soon.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-2xl mx-auto">
-          <InView
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-              },
-            }}
-          >
-            <div className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 sm:p-12 shadow-luxury overflow-hidden text-center">
-              {/* Glow effects */}
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent-primary/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-section-compass/10 rounded-full blur-3xl" />
-
-              <div className="relative space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                  Start Walking in His Steps
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-lg mx-auto">
-                  Open the WWJD app and begin the free 31-Day "In His Steps"
-                  Challenge today.
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  Works on any device — iOS &amp; Android apps coming soon.
-                </p>
-                <div className="pt-2">
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    asChild
-                    className="px-10 py-7 text-lg"
-                  >
-                    <a href="https://app.wwjd.com" target="_blank" rel="noopener noreferrer">
-                      Open WWJD App
-                      <ExternalLink className="w-4 h-4 ml-1" />
-                    </a>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </InView>
-        </div>
-      </section>
-
-      {/* Back to Home */}
-      <div className="max-w-6xl mx-auto px-4 pb-12">
+      {/* ── Back to Home ─────────────────────────────────────────── */}
+      <div className="max-w-6xl mx-auto px-4 py-12">
         <Link
           to="/"
           className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
