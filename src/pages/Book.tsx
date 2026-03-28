@@ -228,11 +228,11 @@ const Book = () => {
                   Start Walking in His Steps
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-lg mx-auto">
-                  Download the WWJD app and begin the free 31-Day "In His Steps"
+                  Open the WWJD app and begin the free 31-Day "In His Steps"
                   Challenge today.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Available on web, iOS, and Android.
+                  Works on any device — iOS &amp; Android apps coming soon.
                 </p>
                 <div className="pt-2">
                   <Button
@@ -242,7 +242,7 @@ const Book = () => {
                     className="px-10 py-7 text-lg"
                   >
                     <a href="https://app.wwjd.com" target="_blank" rel="noopener noreferrer">
-                      Download the WWJD App
+                      Open WWJD App
                       <ExternalLink className="w-4 h-4 ml-1" />
                     </a>
                   </Button>
