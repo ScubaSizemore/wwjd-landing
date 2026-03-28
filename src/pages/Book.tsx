@@ -89,11 +89,11 @@ const Book = () => {
                 </span>
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-[1.1] tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground leading-[1.15] tracking-tight">
                 In His Steps:
                 <br />
                 <span className="italic text-gradient-luxury">
-                  What Would Jesus Do?
+                  What Would Jesus Do?{" "}
                 </span>
               </h1>
 
@@ -116,13 +116,10 @@ const Book = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  asChild
-                  className="px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg"
+                  disabled
+                  className="px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg opacity-70 cursor-not-allowed"
                 >
-                  <a href="https://app.wwjd.com" target="_blank" rel="noopener noreferrer">
-                    Start the 31-Day Challenge
-                    <ExternalLink className="w-4 h-4 ml-1" />
-                  </a>
+                  31-Day Challenge — Coming Easter 2026
                 </Button>
               </div>
 
@@ -145,7 +142,7 @@ const Book = () => {
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-foreground tracking-tight mb-4">
               The Book That Started{" "}
-              <span className="italic text-gradient-luxury">WWJD</span>
+              <span className="italic text-gradient-luxury">WWJD </span>
             </h2>
             <p className="text-center text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">
               130 years old. 50 million copies. One question that changed everything.
@@ -269,16 +266,13 @@ const Book = () => {
             <Button
               variant="outline"
               size="lg"
-              asChild
-              className="px-10 py-7 text-lg"
+              disabled
+              className="px-10 py-7 text-lg opacity-70 cursor-not-allowed"
             >
-              <a href="https://app.wwjd.com" target="_blank" rel="noopener noreferrer">
-                Start the 31-Day Challenge
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+              31-Day Challenge — Coming Easter 2026
             </Button>
             <p className="text-sm text-muted-foreground mt-3">
-              Works on any device — iOS & Android apps coming soon.
+              The challenge launches Easter Sunday. Download the book now and get ready.
             </p>
           </div>
         </div>
