@@ -3,7 +3,7 @@ import { Play } from "lucide-react";
 import { motion } from "motion/react";
 import { InView } from "@/components/ui/in-view";
 
-const VIDEO_ID = "rLaJYErwC-E";
+const VIDEO_ID = "iJkWqpEkXqQ";
 const THUMBNAIL_URL = `https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
 
 export const VideoSection = () => {

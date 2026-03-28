@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { TextShimmer } from "@/components/ui/text-shimmer";
 import { CountdownTimer } from "@/components/landing/CountdownTimer";
 
-const VIDEO_ID = "rLaJYErwC-E";
+const VIDEO_ID = "iJkWqpEkXqQ";
 const THUMBNAIL_URL = `https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
 
 export const HeroSection = () => {
