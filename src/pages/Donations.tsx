@@ -559,6 +559,11 @@ const Donations = () => {
                           </h3>
                         )}
 
+                        {/* Tagline */}
+                        <p className="text-muted-foreground text-lg font-medium">
+                          {tier.tagline}
+                        </p>
+
                         {/* Amount */}
                         <p
                           className={cn(
@@ -570,11 +575,6 @@ const Donations = () => {
                           <span className="text-base font-normal text-muted-foreground ml-2">
                             one-time
                           </span>
-                        </p>
-
-                        {/* Tagline */}
-                        <p className="text-muted-foreground text-lg font-medium">
-                          {tier.tagline}
                         </p>
 
                         {/* Scripture */}
