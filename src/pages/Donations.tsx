@@ -43,7 +43,7 @@ const shepherdsTiers = [
       "The 'Son of Encouragement' \u2014 your monthly gift strengthens the WWJD mission and equips families with daily discipleship tools.",
     icon: Heart,
     spotsTotal: 100,
-    spotsClaimed: 47,
+    spotsClaimed: 4,
   },
   {
     name: "Timothy Partner",
@@ -55,7 +55,7 @@ const shepherdsTiers = [
       "Invest in the next generation. Your partnership directly funds new content, courses, and community features.",
     icon: BookOpen,
     spotsTotal: 50,
-    spotsClaimed: 23,
+    spotsClaimed: 2,
   },
   {
     name: "Shepherd\u2019s Mantle",
@@ -67,7 +67,7 @@ const shepherdsTiers = [
       "A shepherd-level commitment. You shape the tools your congregation will use and get a direct line to our team.",
     icon: Shield,
     spotsTotal: 25,
-    spotsClaimed: 12,
+    spotsClaimed: 1,
   },
 ];
 
@@ -82,7 +82,7 @@ const kingdomTiers = [
       "Your church becomes a foundational partner. Branded community space, priority content requests, and featured on wwjd.com.",
     icon: Church,
     spotsTotal: 30,
-    spotsClaimed: 15,
+    spotsClaimed: 2,
   },
   {
     name: "City on a Hill",
@@ -94,7 +94,7 @@ const kingdomTiers = [
       "Your organization\u2019s impact cannot be hidden. Full church onboarding, quarterly impact reports, and logo displayed in-app.",
     icon: Sunrise,
     spotsTotal: 15,
-    spotsClaimed: 8,
+    spotsClaimed: 1,
     featured: true,
   },
   {
@@ -107,7 +107,7 @@ const kingdomTiers = [
       "Where the movement began. Your church becomes a WWJD launch site with custom deployment and dedicated support.",
     icon: Flame,
     spotsTotal: 5,
-    spotsClaimed: 3,
+    spotsClaimed: 0,
   },
 ];
 
@@ -120,7 +120,7 @@ const pillarTiers = [
     scriptureRef: "Mark 3:14",
     tagline: "12 spots, like the 12 apostles.",
     spotsTotal: 12,
-    spotsClaimed: 3,
+    spotsClaimed: 0,
     benefits: [
       "Permanent name on the Founders Wall",
       "Annual dinner with founding team",
@@ -138,7 +138,7 @@ const pillarTiers = [
     scriptureRef: "Acts 1:14",
     tagline: "Only 3 will ever hold this title.",
     spotsTotal: 3,
-    spotsClaimed: 1,
+    spotsClaimed: 0,
     benefits: [
       "Everything in The Twelve",
       "Name a major app feature",
@@ -318,13 +318,13 @@ const Donations = () => {
               <motion.div
                 className="h-full rounded-full bg-gradient-to-r from-luxury-gold to-luxury-copper"
                 initial={{ width: 0 }}
-                animate={{ width: "27%" }}
+                animate={{ width: "10%" }}
                 transition={{ delay: 0.7, duration: 1.2, ease: "easeOut" }}
               />
             </div>
             <p className="text-sm text-muted-foreground">
-              <span className="font-semibold text-luxury-gold">73 of 100</span> Founding Partner
-              spots remaining
+              <span className="font-semibold text-luxury-gold">10 of 100</span> Founding Partner
+              spots claimed
             </p>
           </motion.div>
 
