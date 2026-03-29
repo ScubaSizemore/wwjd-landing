@@ -35,20 +35,20 @@ import { cn } from "@/lib/utils";
 const shepherdsTiers = [
   {
     name: "Barnabas Partner",
-    amount: 5000,
-    amountLabel: "$50/mo",
+    amount: 100000,
+    amountLabel: "$1,000",
     scripture: "He was a good man, full of the Holy Spirit and faith.",
     scriptureRef: "Acts 4:36",
     description:
-      "The 'Son of Encouragement' \u2014 your monthly gift strengthens the WWJD mission and equips families with daily discipleship tools.",
+      "The 'Son of Encouragement' \u2014 your gift strengthens the WWJD mission and equips families with daily discipleship tools.",
     icon: Heart,
     spotsTotal: 100,
     spotsClaimed: 4,
   },
   {
     name: "Timothy Partner",
-    amount: 10000,
-    amountLabel: "$100/mo",
+    amount: 250000,
+    amountLabel: "$2,500",
     scripture: "The things you have heard me say... entrust to reliable people.",
     scriptureRef: "2 Timothy 2:2",
     description:
@@ -59,8 +59,8 @@ const shepherdsTiers = [
   },
   {
     name: "Shepherd\u2019s Mantle",
-    amount: 25000,
-    amountLabel: "$250/mo",
+    amount: 500000,
+    amountLabel: "$5,000",
     scripture: "Be shepherds of God\u2019s flock that is under your care.",
     scriptureRef: "1 Peter 5:2\u20134",
     description:
@@ -74,8 +74,8 @@ const shepherdsTiers = [
 const kingdomTiers = [
   {
     name: "Cornerstone Church",
-    amount: 50000,
-    amountLabel: "$500/mo",
+    amount: 1000000,
+    amountLabel: "$10,000",
     scripture: "Built on the foundation of the apostles and prophets.",
     scriptureRef: "Ephesians 2:20",
     description:
@@ -86,8 +86,8 @@ const kingdomTiers = [
   },
   {
     name: "City on a Hill",
-    amount: 100000,
-    amountLabel: "$1,000/mo",
+    amount: 2500000,
+    amountLabel: "$25,000",
     scripture: "A town built on a hill cannot be hidden.",
     scriptureRef: "Matthew 5:14",
     description:
@@ -99,8 +99,8 @@ const kingdomTiers = [
   },
   {
     name: "Upper Room",
-    amount: 250000,
-    amountLabel: "$2,500/mo",
+    amount: 5000000,
+    amountLabel: "$50,000",
     scripture: "They all joined together constantly in prayer.",
     scriptureRef: "Acts 1:13\u201314",
     description:
@@ -175,12 +175,12 @@ const pillarTiers = [
 const impactCards = [
   {
     icon: Users,
-    amount: "$100/mo",
+    amount: "$1,000",
     impact: "Equips 10 families with daily discipleship tools",
   },
   {
     icon: Church,
-    amount: "$500/mo",
+    amount: "$10,000",
     impact: "Launches WWJD in a new church community",
   },
   {
@@ -404,7 +404,7 @@ const Donations = () => {
                 <DonationTierCard
                   {...tier}
                   ctaLabel="Become a Partner"
-                  onSelect={() => handleTierSelect(tier.name, tier.amount, "monthly")}
+                  onSelect={() => handleTierSelect(tier.name, tier.amount, "one_time")}
                 />
               </InView>
             ))}
@@ -459,7 +459,7 @@ const Donations = () => {
                 <DonationTierCard
                   {...tier}
                   ctaLabel={tier.featured ? "Partner Now" : "Become a Partner"}
-                  onSelect={() => handleTierSelect(tier.name, tier.amount, "monthly")}
+                  onSelect={() => handleTierSelect(tier.name, tier.amount, "one_time")}
                 />
               </InView>
             ))}

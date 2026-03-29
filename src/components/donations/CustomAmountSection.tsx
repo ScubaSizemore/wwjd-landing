@@ -6,18 +6,17 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { InView } from "@/components/ui/in-view";
 
-const QUICK_AMOUNTS = [250, 500, 1_000, 5_000, 10_000, 25_000];
+const QUICK_AMOUNTS = [500, 1_000, 2_500, 5_000, 10_000, 25_000];
+const MIN_AMOUNT = 500;
 
 export const CustomAmountSection = () => {
-  const [frequency, setFrequency] = useState<"monthly" | "one_time">("monthly");
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
   const [customValue, setCustomValue] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
   const effectiveAmount = selectedAmount ?? (customValue ? Number(customValue) : 0);
-  const minAmount = frequency === "monthly" ? 50 : 500;
-  const isValid = effectiveAmount >= minAmount && email.includes("@") && email.includes(".");
+  const isValid = effectiveAmount >= MIN_AMOUNT && email.includes("@") && email.includes(".");
 
   const handleQuickSelect = (amt: number) => {
     setSelectedAmount(amt);
@@ -36,8 +35,8 @@ export const CustomAmountSection = () => {
     const result = await createLandingDonation({
       email,
       amount: effectiveAmount * 100, // convert to cents
-      frequency,
-      tierName: `Custom ${frequency === "monthly" ? "Monthly" : "One-Time"} Gift`,
+      frequency: "one_time",
+      tierName: "Custom One-Time Gift",
     });
 
     if ("url" in result) {
@@ -73,34 +72,6 @@ export const CustomAmountSection = () => {
           }}
         >
           <div className="p-6 sm:p-10 rounded-2xl sm:rounded-3xl bg-card border border-border space-y-8">
-            {/* Frequency Toggle */}
-            <div className="flex justify-center">
-              <div className="inline-flex rounded-full bg-muted p-1">
-                <button
-                  onClick={() => setFrequency("monthly")}
-                  className={cn(
-                    "px-5 py-2 rounded-full text-sm font-medium transition-all duration-200",
-                    frequency === "monthly"
-                      ? "bg-foreground text-background shadow-sm"
-                      : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  Monthly
-                </button>
-                <button
-                  onClick={() => setFrequency("one_time")}
-                  className={cn(
-                    "px-5 py-2 rounded-full text-sm font-medium transition-all duration-200",
-                    frequency === "one_time"
-                      ? "bg-foreground text-background shadow-sm"
-                      : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  One-Time
-                </button>
-              </div>
-            </div>
-
             {/* Quick Select Pills */}
             <div className="flex flex-wrap justify-center gap-3">
               {QUICK_AMOUNTS.map((amt) => (
@@ -149,9 +120,9 @@ export const CustomAmountSection = () => {
             </div>
 
             {/* Min amount hint */}
-            {effectiveAmount > 0 && effectiveAmount < minAmount && (
+            {effectiveAmount > 0 && effectiveAmount < MIN_AMOUNT && (
               <p className="text-xs text-center text-warning">
-                Minimum {frequency === "monthly" ? "$50/mo" : "$500 one-time"}
+                Minimum $500
               </p>
             )}
 
@@ -170,7 +141,7 @@ export const CustomAmountSection = () => {
                     Creating checkout...
                   </>
                 ) : (
-                  `Donate ${effectiveAmount ? "$" + effectiveAmount.toLocaleString() : ""}${frequency === "monthly" ? "/mo" : ""}`
+                  `Donate ${effectiveAmount ? "$" + effectiveAmount.toLocaleString() : ""}`
                 )}
               </Button>
             </div>

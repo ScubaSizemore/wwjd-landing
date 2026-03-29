@@ -10,19 +10,14 @@ const faqs = [
       "Yes, WWJD Global Outreach, Inc. is a registered 501(c)(3) non-profit organization. You will receive a tax-deductible receipt via email for every donation.",
   },
   {
-    question: "Can I change or cancel my recurring donation?",
-    answer:
-      "Yes, anytime. Every receipt email includes a link to the Stripe customer portal where you can update your payment method, change your amount, or cancel.",
-  },
-  {
     question: "What's the difference between this and in-app donations?",
     answer:
-      'In-app donations ($1.99\u2013$20/mo) unlock premium app features for individual users. Founding Partner gifts are larger commitments that fund the mission directly \u2014 platform development, content creation, and global outreach.',
+      'In-app donations ($1.99\u2013$20/mo) are small recurring gifts that unlock premium app features for individual users. Founding Partner gifts on this page are one-time commitments that fund the mission directly \u2014 platform development, content creation, and global outreach.',
   },
   {
-    question: "Can I make a one-time gift?",
+    question: "Will I receive a receipt?",
     answer:
-      'Yes. Use the custom amount section above and toggle to "One-Time." Legacy-level gifts (The Twelve, The Upper Room, The Cornerstone) are also one-time commitments.',
+      "Yes. After your gift is processed through Stripe, you will receive an email receipt for your records. All donations are tax-deductible under our 501(c)(3) status.",
   },
   {
     question: "How are funds used?",
