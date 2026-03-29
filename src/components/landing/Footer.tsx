@@ -40,6 +40,12 @@ export const Footer = () => {
             >
               EULA
             </Link>
+            <Link
+              to="/donations"
+              className="text-sm text-muted-foreground hover:text-accent transition-colors"
+            >
+              Donate
+            </Link>
           </div>
         </div>
 

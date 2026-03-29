@@ -15,6 +15,7 @@ const navItems: NavItem[] = [
   { label: 'Features', sectionId: 'features-section' },
   { label: 'How It Works', sectionId: 'how-it-works-section' },
   { label: 'The Book', href: '/book' },
+  { label: 'Donate', href: '/donations' },
 ];
 
 export const LandingNavBar = () => {
