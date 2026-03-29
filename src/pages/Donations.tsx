@@ -114,8 +114,8 @@ const kingdomTiers = [
 const pillarTiers = [
   {
     name: "The Twelve",
-    amount: 5000000,
-    amountLabel: "$50,000",
+    amount: 10000000,
+    amountLabel: "$100,000",
     scripture: "He appointed twelve that they might be with him.",
     scriptureRef: "Mark 3:14",
     tagline: "12 spots, like the 12 apostles.",
@@ -132,8 +132,8 @@ const pillarTiers = [
   },
   {
     name: "The Upper Room",
-    amount: 10000000,
-    amountLabel: "$100,000",
+    amount: 25000000,
+    amountLabel: "$250,000",
     scripture: "They were all together in one place.",
     scriptureRef: "Acts 1:14",
     tagline: "Only 3 will ever hold this title.",
@@ -151,8 +151,8 @@ const pillarTiers = [
   },
   {
     name: "The Cornerstone",
-    amount: 20000000,
-    amountLabel: "$200,000",
+    amount: 50000000,
+    amountLabel: "$500,000",
     scripture: "The stone the builders rejected has become the cornerstone.",
     scriptureRef: "Psalm 118:22",
     tagline: "1 of 1. There is only one Cornerstone.",
