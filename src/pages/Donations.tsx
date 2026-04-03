@@ -289,10 +289,10 @@ const Donations = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            Build the Kingdom.
+            Be Part of What God Is Doing Through
             <br />
             <span className="italic text-gradient-luxury pr-1 pb-1 inline-block">
-              Before the World Catches On.
+              WWJD Global Outreach
             </span>
           </motion.h1>
 
@@ -303,8 +303,10 @@ const Donations = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
-            WWJD is launching Easter 2026. A small circle of founding partners will fuel a movement
-            that reaches millions. These spots are limited &mdash; and they won&rsquo;t come back.
+            Your support helps expand WWJD Global Outreach by making the message of Christ accessible
+            through digital tools, global content, and community-driven discipleship. Every gift fuels
+            the development of resources that reach individuals, families, and communities with hope,
+            guidance, and the message of Jesus.
           </motion.p>
 
           {/* Progress bar */}
