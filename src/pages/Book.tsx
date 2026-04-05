@@ -116,10 +116,10 @@ const Book = () => {
                 <Button
                   variant="outline"
                   size="lg"
-                  disabled
-                  className="px-4 sm:px-8 py-5 sm:py-7 text-sm sm:text-lg opacity-70 cursor-not-allowed w-full sm:w-auto"
+                  onClick={() => window.location.href = 'https://app.wwjd.com'}
+                  className="px-4 sm:px-8 py-5 sm:py-7 text-sm sm:text-lg w-full sm:w-auto"
                 >
-                  31-Day Challenge — Easter 2026
+                  Start the 31-Day Challenge
                 </Button>
               </div>
 
@@ -261,15 +261,15 @@ const Book = () => {
           {/* Challenge CTA */}
           <div className="text-center">
             <Button
-              variant="outline"
+              variant="primary"
               size="lg"
-              disabled
-              className="px-6 sm:px-10 py-5 sm:py-7 text-sm sm:text-lg opacity-70 cursor-not-allowed"
+              onClick={() => window.location.href = 'https://app.wwjd.com'}
+              className="px-6 sm:px-10 py-5 sm:py-7 text-sm sm:text-lg"
             >
-              31-Day Challenge — Easter 2026
+              Start the 31-Day Challenge
             </Button>
             <p className="text-sm text-muted-foreground mt-3">
-              The challenge launches Easter Sunday. Download the book now and get ready.
+              The challenge is live in the app. Download the book and follow along.
             </p>
           </div>
         </div>

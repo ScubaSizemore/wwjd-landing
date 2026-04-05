@@ -91,9 +91,9 @@ export const LandingNavBar = () => {
             <Button
               variant="primary"
               size="sm"
-              onClick={() => scrollToSection('signup-section')}
+              onClick={() => window.location.href = 'https://app.wwjd.com'}
             >
-              Join the Waitlist
+              Open the App
             </Button>
           </div>
 
@@ -123,9 +123,9 @@ export const LandingNavBar = () => {
                 <Button
                   variant="primary"
                   className="w-full"
-                  onClick={() => scrollToSection('signup-section')}
+                  onClick={() => window.location.href = 'https://app.wwjd.com'}
                 >
-                  Join the Waitlist
+                  Open the App
                 </Button>
               </div>
             </div>

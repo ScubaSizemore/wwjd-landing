@@ -1,8 +1,6 @@
-import { useEffect } from "react";
-import { Sparkles } from "lucide-react";
+import { Rocket } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { InView } from "@/components/ui/in-view";
-
-const GHL_FORM_URL = "https://api.xealai.com/widget/form/Sgb0KpGQH0DNfSj9PHDp";
 
 interface SignupFormProps {
   variant?: "primary" | "secondary";
@@ -10,16 +8,6 @@ interface SignupFormProps {
 
 export const SignupForm = ({ variant = "primary" }: SignupFormProps) => {
   const isPrimary = variant === "primary";
-
-  useEffect(() => {
-    // Load GHL form script once
-    if (!document.querySelector('script[src*="xealai.com/js/form_embed.js"]')) {
-      const script = document.createElement("script");
-      script.src = "https://api.xealai.com/js/form_embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
 
   return (
     <section
@@ -39,35 +27,27 @@ export const SignupForm = ({ variant = "primary" }: SignupFormProps) => {
             <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-section-compass/10 rounded-full blur-3xl" />
 
             <div className="relative space-y-6 text-center">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-luxury-gold/10 border border-luxury-gold/20">
-                <Sparkles className="w-4 h-4 text-luxury-gold" />
-                <span className="text-sm font-semibold text-luxury-gold">
-                  Limited to 1,000 Founding Members
-                </span>
-              </div>
-
               {/* Heading */}
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 {isPrimary
-                  ? "Be Among the First 1,000"
-                  : "Don't Miss Your Spot"}
+                  ? "The App Is Live"
+                  : "Start Growing Today"}
               </h2>
               <p className="text-lg text-muted-foreground max-w-lg mx-auto">
-                {isPrimary
-                  ? "Join the exclusive waitlist and be the first to experience WWJD.com when we launch Easter 2026."
-                  : "Reserve your spot now and get early access to the WWJD.com SuperApp this Easter."}
+                WWJD.com is live. Tap below to create your free account and start your faith journey today.
               </p>
 
-              {/* GHL Form Embed */}
-              <div className="rounded-xl overflow-hidden -mx-2 sm:mx-0">
-                <iframe
-                  src={GHL_FORM_URL}
-                  style={{ border: "none", width: "100%", minHeight: "350px", maxHeight: "600px" }}
-                  scrolling="no"
-                  id={isPrimary ? "ghl-form" : "ghl-form-bottom"}
-                  title="Join the WWJD Waitlist"
-                />
+              {/* Launch CTA */}
+              <div className="pt-4">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.location.href = 'https://app.wwjd.com'}
+                  className="px-12 py-7 text-lg"
+                >
+                  <Rocket className="w-5 h-5 mr-2" />
+                  Get Started Free
+                </Button>
               </div>
             </div>
           </div>

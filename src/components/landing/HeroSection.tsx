@@ -1,10 +1,9 @@
 import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Sparkles, Play } from "lucide-react";
+import { Play, Rocket } from "lucide-react";
 import wwjdLogo from "@/assets/wwjd-icon-blue.png";
 import { motion, useScroll, useTransform } from "motion/react";
 import { TextShimmer } from "@/components/ui/text-shimmer";
-import { CountdownTimer } from "@/components/landing/CountdownTimer";
 
 const VIDEO_ID = "iJkWqpEkXqQ";
 const THUMBNAIL_URL = `https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`;
@@ -88,14 +87,14 @@ export const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Tagline shimmer */}
+        {/* Launch tagline */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
           <TextShimmer className="text-lg md:text-xl font-medium tracking-wide uppercase" duration={3}>
-            Coming Easter 2026
+            We Are Live
           </TextShimmer>
         </motion.div>
 
@@ -124,44 +123,21 @@ export const HeroSection = () => {
           WWJD.com is a new Christ-centered platform designed to help you grow daily through biblical guidance, discipleship tools, and faith-building content for the whole family.
         </motion.p>
 
-        {/* Countdown */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-        >
-          <CountdownTimer />
-        </motion.div>
-
-        {/* Urgency Badge */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-          className="flex justify-center"
-        >
-          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-luxury-gold/10 border border-luxury-gold/20 shadow-soft">
-            <Sparkles className="w-4 h-4 text-luxury-gold" />
-            <span className="text-sm font-semibold text-luxury-gold">
-              Limited to 1,000 Founding Members
-            </span>
-          </div>
-        </motion.div>
-
-        {/* CTAs */}
+        {/* CTA */}
         <motion.div
           className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+          transition={{ delay: 0.6, duration: 0.5 }}
         >
           <Button
             variant="primary"
             size="lg"
-            onClick={scrollToSignup}
-            className="w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg"
+            onClick={() => window.location.href = 'https://app.wwjd.com'}
+            className="w-full sm:w-auto px-10 sm:px-12 py-7 sm:py-8 text-lg sm:text-xl"
           >
-            Reserve My Spot
+            <Rocket className="w-5 h-5 mr-2" />
+            Launch the App
           </Button>
         </motion.div>
 
@@ -180,7 +156,7 @@ export const HeroSection = () => {
               />
             ))}
           </div>
-          <span className="font-medium">Join the founding members</span>
+          <span className="font-medium">Join thousands growing in faith</span>
         </motion.div>
       </div>
     </section>
