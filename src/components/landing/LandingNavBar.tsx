@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BrandText } from '@/components/layout/BrandText';
 import { cn } from '@/lib/utils';
+
+const APP_STORE_URL = 'https://apps.apple.com/us/app/wwjd-com-super-app/id6764636824';
 
 interface NavItem {
   label: string;
@@ -91,9 +93,10 @@ export const LandingNavBar = () => {
             <Button
               variant="primary"
               size="sm"
-              onClick={() => window.location.href = 'https://app.wwjd.com'}
+              onClick={() => window.open(APP_STORE_URL, '_blank', 'noopener,noreferrer')}
             >
-              Open the App
+              <Download className="w-4 h-4 mr-1.5" />
+              Download Now
             </Button>
           </div>
 
@@ -123,9 +126,10 @@ export const LandingNavBar = () => {
                 <Button
                   variant="primary"
                   className="w-full"
-                  onClick={() => window.location.href = 'https://app.wwjd.com'}
+                  onClick={() => window.open(APP_STORE_URL, '_blank', 'noopener,noreferrer')}
                 >
-                  Open the App
+                  <Download className="w-4 h-4 mr-1.5" />
+                  Download Now
                 </Button>
               </div>
             </div>

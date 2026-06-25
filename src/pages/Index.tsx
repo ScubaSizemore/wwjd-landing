@@ -1,5 +1,6 @@
 import { LandingNavBar } from "@/components/landing/LandingNavBar";
 import { HeroSection } from "@/components/landing/HeroSection";
+import { AppStoreSection } from "@/components/landing/AppStoreSection";
 import { SignupForm } from "@/components/landing/SignupForm";
 // VideoSection now embedded in HeroSection
 import { FeatureRibbon } from "@/components/landing/FeatureRibbon";
@@ -17,7 +18,7 @@ const Index = () => {
     <div className="min-h-dvh bg-background">
       <LandingNavBar />
       <HeroSection />
-      <SignupForm variant="primary" />
+      <AppStoreSection />
       <DonationBanner />
       <BookBanner />
       <FeatureRibbon />
