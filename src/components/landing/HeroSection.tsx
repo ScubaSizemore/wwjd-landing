@@ -126,7 +126,7 @@ export const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          WWJD.com is a new Christ-centered platform designed to help you grow daily through biblical guidance, discipleship tools, and faith-building content for the whole family.
+          Download the WWJD.com SuperApp — your all-in-one companion for daily Scripture, discipleship, family faith, and community. Available now on iOS.
         </motion.p>
 
         {/* CTA */}

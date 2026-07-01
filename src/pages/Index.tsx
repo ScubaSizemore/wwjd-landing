@@ -10,7 +10,6 @@ import { WWJDEventsSection } from "@/components/landing/WWJDEventsSection";
 import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
 import { Footer } from "@/components/landing/Footer";
 import { DonationBanner } from "@/components/landing/DonationBanner";
-import { BookBanner } from "@/components/landing/BookBanner";
 import { BackToTopButton } from "@/components/landing/BackToTopButton";
 
 const Index = () => {
@@ -20,7 +19,6 @@ const Index = () => {
       <HeroSection />
       <AppStoreSection />
       <DonationBanner />
-      <BookBanner />
       <FeatureRibbon />
       <ProblemSection />
       <DifferentiatorsSection />

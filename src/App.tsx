@@ -3,6 +3,7 @@ import { Toaster } from "sonner";
 import Index from "./pages/Index";
 import Book from "./pages/Book";
 import Donations from "./pages/Donations";
+import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import EULA from "./pages/EULA";
@@ -14,6 +15,8 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/book" element={<Book />} />
         <Route path="/donations" element={<Donations />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/partners" element={<Navigate to="/contact" replace />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/eula" element={<EULA />} />
