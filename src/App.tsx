@@ -4,6 +4,7 @@ import Index from "./pages/Index";
 import Book from "./pages/Book";
 import Donations from "./pages/Donations";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import EULA from "./pages/EULA";
@@ -20,7 +21,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/eula" element={<EULA />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Toaster />
     </BrowserRouter>
