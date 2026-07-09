@@ -149,10 +149,10 @@ const Donations = () => {
         >
           <div className="max-w-4xl mx-auto rounded-2xl bg-card/80 border border-border border-l-4 border-l-luxury-gold p-8 sm:p-12">
             <p className="text-xl sm:text-2xl md:text-3xl font-serif italic text-foreground leading-relaxed">
-              &ldquo;Whoever sows generously will also reap generously.&rdquo;
+              &ldquo;Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.&rdquo;
             </p>
             <p className="mt-4 text-sm text-muted-foreground font-medium tracking-wide">
-              &mdash; 2 Corinthians 9:6
+              &mdash; 2 Corinthians 9:7
             </p>
           </div>
         </InView>
