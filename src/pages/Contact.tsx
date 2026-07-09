@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useCanonical } from "@/lib/useCanonical";
 import { Mail, Building2, Mic, Handshake } from "lucide-react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
@@ -23,6 +24,7 @@ const Contact = () => {
     message: "",
   });
 
+  useCanonical("/contact");
   useEffect(() => {
     document.title = "Partners & Publicity — WWJD.com";
     window.scrollTo(0, 0);

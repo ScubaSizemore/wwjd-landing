@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useCanonical } from "@/lib/useCanonical";
 import { Link } from "react-router-dom";
 import { BookOpen, MessageSquare, Headphones, Users, Sparkles, ArrowLeft, Download, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -41,6 +42,7 @@ const challengeFeatures = [
 ];
 
 const Book = () => {
+  useCanonical("/book");
   useEffect(() => {
     document.title = "In His Steps — WWJD.com";
     window.scrollTo(0, 0);

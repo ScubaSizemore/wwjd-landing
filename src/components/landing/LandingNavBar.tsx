@@ -138,17 +138,20 @@ export const LandingNavBar = () => {
                     </div>
                   </a>
 
-                  {/* Google Play — Coming Soon */}
-                  <div className="flex items-center gap-3 px-4 py-3 opacity-50 cursor-default">
+                  {/* Google Play */}
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.wwjd.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsAppDropdownOpen(false)}
+                    className="flex items-center gap-3 px-4 py-3 hover:bg-accent/10 transition-colors"
+                  >
                     <GooglePlayLogo />
                     <div className="text-left">
-                      <div className="text-sm font-semibold text-foreground flex items-center gap-2">
-                        Google Play
-                        <span className="text-[10px] bg-accent/20 text-accent px-1.5 py-0.5 rounded font-bold uppercase">Soon</span>
-                      </div>
-                      <div className="text-xs text-muted-foreground">Coming soon</div>
+                      <div className="text-sm font-semibold text-foreground">Google Play</div>
+                      <div className="text-xs text-muted-foreground">Download now</div>
                     </div>
-                  </div>
+                  </a>
 
                   <div className="border-t border-border/50 my-1" />
 
@@ -206,10 +209,16 @@ export const LandingNavBar = () => {
                   <AppleLogo />
                   <span className="text-sm font-semibold">Download on the App Store</span>
                 </a>
-                <div className="flex items-center gap-3 bg-muted/30 text-muted-foreground/50 px-4 py-3 rounded-xl w-full border border-border/30 cursor-default">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.wwjd.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="flex items-center gap-3 bg-muted/20 text-foreground px-4 py-3 rounded-xl w-full border border-border/30"
+                >
                   <GooglePlayLogo />
-                  <span className="text-sm font-semibold">Google Play — Coming Soon</span>
-                </div>
+                  <span className="text-sm font-semibold">Download on Google Play</span>
+                </a>
                 <button
                   onClick={() => { window.open(WEB_APP_URL, '_blank', 'noopener,noreferrer'); setIsMobileMenuOpen(false); }}
                   className="flex items-center gap-3 text-muted-foreground/70 px-4 py-2 text-sm w-full"

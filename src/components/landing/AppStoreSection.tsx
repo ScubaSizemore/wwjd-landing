@@ -79,17 +79,19 @@ export const AppStoreSection = () => {
               </div>
             </a>
 
-            {/* Google Play — Coming Soon */}
-            <div className="relative group flex items-center gap-3 bg-muted/40 text-muted-foreground px-7 py-4 rounded-2xl min-w-[200px] cursor-default border border-border/40">
+            {/* Google Play */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.wwjd.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 bg-foreground text-background px-7 py-4 rounded-2xl hover:opacity-90 active:scale-95 transition-all duration-200 shadow-float min-w-[200px]"
+            >
               <GooglePlayLogo />
               <div className="text-left">
-                <div className="text-xs opacity-60 leading-none mb-0.5">Coming Soon to</div>
+                <div className="text-xs opacity-60 leading-none mb-0.5">Get it on</div>
                 <div className="text-base font-bold leading-tight">Google Play</div>
               </div>
-              <span className="absolute -top-2.5 -right-2.5 bg-accent text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wide shadow-sm">
-                Soon
-              </span>
-            </div>
+            </a>
           </motion.div>
 
           {/* Sub-note */}

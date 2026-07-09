@@ -1,3 +1,4 @@
+import { useCanonical } from "@/lib/useCanonical";
 import { LandingNavBar } from "@/components/landing/LandingNavBar";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { AppStoreSection } from "@/components/landing/AppStoreSection";
@@ -13,6 +14,7 @@ import { DonationBanner } from "@/components/landing/DonationBanner";
 import { BackToTopButton } from "@/components/landing/BackToTopButton";
 
 const Index = () => {
+  useCanonical("/");
   return (
     <div className="min-h-dvh bg-background">
       <LandingNavBar />

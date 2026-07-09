@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useCanonical } from "@/lib/useCanonical";
 import {
   Sparkles,
   Shield,
@@ -45,6 +46,7 @@ const Donations = () => {
     message: "",
   });
 
+  useCanonical("/donations");
   useEffect(() => {
     document.title = "Support Us — WWJD.com";
     window.scrollTo(0, 0);
